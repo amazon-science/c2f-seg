@@ -3,7 +3,7 @@ float16: False
 seed: 42
 restore: False
 
-model_type: 'VQModel'
+model_type: 'vqgan'
 
 # =========================== DATA Settings ===========================
 dataset: 'MOViD_A'

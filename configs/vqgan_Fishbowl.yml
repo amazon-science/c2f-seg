@@ -2,9 +2,8 @@
 float16: False
 seed: 42
 restore: False
-#finetune_g_path: check_points/vqgan_ffhq_V22/VQGAN_g_last.pth
-#finetune_d_path: check_points/vqgan_ffhq_V22/VQGAN_d_last.pth
-model_type: 'VQModel'
+
+model_type: 'vqgan'
 
 # =========================== DATA Settings ===========================
 dataset: 'Fishbowl'
@@ -12,34 +11,22 @@ input_size: 256
 flip: True
 center_crop: False
 
-train_image_root: /home/ubuntu/data/fishbowl/train_data/train_frames
-test_image_root: /home/ubuntu/data/fishbowl/test_data/test_frames
-
-train_mask_path: /home/ubuntu/data/fishbowl/train_fish.pkl
-test_mask_path: /home/ubuntu/data/fishbowl/test_fish.pkl
-
-# data
-data_flist:
-  Fishbowl: [
-      '/home/ubuntu/data/fishbowl/train_list.txt',
-      '/home/ubuntu/data/fishbowl/test_list.txt'
-  ]
-
+root_path: /home/ubuntu/data/FishBowl
 # =========================== MODEL Settings ===========================
 
 model:
   params:
-    embed_dim: 32 # 256 orignal
-    n_embed: 32 # 1024 # 重要 codebook size
+    embed_dim: 32
+    n_embed: 32
     ddconfig:
       double_z: False
       z_channels: 256
-      resolution_h: 256 # 160
-      resolution_w: 256 # 240
+      resolution_h: 256
+      resolution_w: 256 
       in_channels: 1
       out_ch: 1
       ch: 128
-      ch_mult: [1,1,2,2,4]  # [1,1,2,2,4]
+      ch_mult: [1,1,2,2,4] 
       num_res_blocks: 2
       attn_resolutions: [6, 10]
       dropout: 0.0

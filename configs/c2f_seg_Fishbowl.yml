@@ -2,8 +2,8 @@
 float16: False
 seed: 42
 restore: False
-stage1_iteration: "_300000"
-stage2_iteration: "_fishbowl"
+stage1_iteration: "_Fishbowl"
+stage2_iteration: "_Fishbowl"
 model_type: 'c2f_seg'
 
 # =========================== DATA Settings ===========================
@@ -14,7 +14,7 @@ trans_size: 16
 sigma: 0.05
 flip: True
 center_crop: False
-root_path: /home/ubuntu/release_dataset/fishbowl
+root_path: /home/ubuntu/data/fishbowl
 enlarge_coef: 2
 train_seq_len: 16
 num_workers: 8
@@ -32,7 +32,7 @@ n_head: 12
 attn_pdrop: 0.01
 resid_pdrop: 0.01
 embd_pdrop: 0.01
-vocab_size: 256  # keep the same with the codebook size of VQ
+vocab_size: 256 
 n_layer: 8
 
 # train with img loss
