@@ -1,0 +1,81 @@
+# =========================== GLOBAL Settings ===========================
+float16: False
+seed: 42
+restore: False
+stage1_iteration: "_100000"
+stage2_iteration: "_kins"
+model_type: 'c2f_seg'
+
+# =========================== DATA Settings ===========================
+input_size: 256
+st_in_channel: 6
+trans_size: 16
+sigma: 0.05
+flip: True
+center_crop: False
+train_num_workers: 8
+test_num_workers: 2
+Image_W: 256
+Image_H: 256
+patch_W: 256
+patch_H: 256
+root_path: /home/ubuntu/data/KINS
+
+# =========================== Model Settings ===========================
+init_gpt_with_vqvae: False
+plm_in_cond: False
+lm_rate: 1   
+sequence_length: 256
+n_quant: 256
+n_embd: 768 
+n_head: 12
+attn_pdrop: 0.01
+resid_pdrop: 0.01
+embd_pdrop: 0.01
+vocab_size: 256 
+n_layer: 12
+# force_causal_conv: True
+
+# if use condGPT use encoder_layer and decoder_layer
+use_cond_gpt: False 
+enc_layer: 6
+dec_layer: 12
+
+# train with img loss
+train_with_dec: False
+combined_vqgan: True
+gumbel_softmax: True 
+temp_start: 1.0 
+temp_end: 0.1 
+balanced_loss: True
+tp: 10.
+rec_weight: 1.0
+mask_cb_weight: 1.5
+valid_cb_weight: 0.5
+perceptual_weight: 0.2
+vgg_weights: [1.0, 1.0, 1.0, 1.0, 1.0]
+vgg_norm: True
+
+# =========================== Training Settings ===========================
+lr: 3e-4  # 3e-4
+beta1: 0.9                    # adam optimizer beta1
+beta2: 0.95                   # adam optimizer beta2
+weight_decay: 0.01
+batch_size: 64
+max_iters: 150000
+warmup_iters: 5000
+decay_type: 'warmup_linear'
+min_mask_rate: 0.50
+gamma_mode: "cosine"
+
+# =========================== Validation Settings ===========================
+eval_iters: 500
+save_iters: 1000
+val_vis_iters: 100
+train_sample_iters: 500
+sample_size: 1
+temperature: 1.0
+sample_topk: 5
+log_iters: 100
+fid_test: True
+save_best: True

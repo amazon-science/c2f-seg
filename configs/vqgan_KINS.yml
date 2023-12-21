@@ -1,0 +1,82 @@
+# =========================== GLOBAL Settings ===========================
+float16: False
+seed: 42
+restore: False
+
+model_type: 'VQModel'
+
+# =========================== DATA Settings ===========================
+dataset: 'KINS'
+input_size: 256
+flip: True
+
+# data
+root_path: /home/ubuntu/data/KINS
+
+# =========================== MODEL Settings ===========================
+
+model:
+  params:
+    embed_dim: 256
+    n_embed: 256 # codebook size
+    ddconfig:
+      double_z: False
+      z_channels: 256
+      resolution_h: 256
+      resolution_w: 256
+      in_channels: 1
+      out_ch: 1
+      ch: 128
+      ch_mult: [1,1,2,2,4]
+      num_res_blocks: 2
+      attn_resolutions: [6, 10]
+      dropout: 0.0
+
+    lossconfig:
+      params:
+        disc_conditional: false
+        disc_in_channels: 1
+        disc_start: 0
+        disc_weight: 0.75
+        disc_num_layers: 2
+        codebook_weight: 1.0
+
+    sketchconfig:
+      params:
+        use_gan: False
+        use_sn: False
+        gan_type: hinge
+        disc_in_channels: 1
+        disc_factor: 0.1
+        disc_weight: 1.0
+        codebook_weight: 1.0
+
+balanced_loss: False
+perceptual_weight: 0.2 # vgg19:0.2, LPIPS:1.0
+perceptual_type: 'vgg19' # 'vgg19', 'LPIPS'
+vgg_weights: [1.0, 1.0, 1.0, 1.0, 1.0]
+vgg_norm: True
+
+# =========================== Training Settings ===========================
+d_lr: 5e-5
+g_lr: 5e-5
+beta1: 0.5                    # adam optimizer beta1
+beta2: 0.9                  # adam optimizer beta2
+batch_size: 4
+max_iters: 100000
+decay_type: 'milestone'
+drop_steps: 30000
+drop_gamma: 0.5
+
+# =========================== Validation Settings ===========================
+eval_iters: 1000
+save_iters: 10000
+sample_iters: 1000
+sample_size: 16
+log_iters: 100
+fid_test: True
+save_best: True
+
+# test for partial vqvae
+eval_no_mask: False
+eval_all_mask: False
