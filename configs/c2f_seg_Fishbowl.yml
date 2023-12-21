@@ -2,7 +2,7 @@
 float16: False
 seed: 42
 restore: False
-stage1_iteration: "_100000"
+stage1_iteration: "_300000"
 stage2_iteration: "_fishbowl"
 model_type: 'c2f_seg'
 
@@ -32,7 +32,7 @@ n_head: 12
 attn_pdrop: 0.01
 resid_pdrop: 0.01
 embd_pdrop: 0.01
-vocab_size: 256 
+vocab_size: 256  # keep the same with the codebook size of VQ
 n_layer: 8
 
 # train with img loss

@@ -7,6 +7,7 @@ stage2_iteration: "_kins"
 model_type: 'c2f_seg'
 
 # =========================== DATA Settings ===========================
+# dataset: 'CLEVRER'  # 'places2', 'celeba', 'shanghaitech'
 input_size: 256
 st_in_channel: 6
 trans_size: 16
@@ -27,12 +28,12 @@ plm_in_cond: False
 lm_rate: 1   
 sequence_length: 256
 n_quant: 256
-n_embd: 768 
+n_embd: 768 # 256
 n_head: 12
 attn_pdrop: 0.01
 resid_pdrop: 0.01
 embd_pdrop: 0.01
-vocab_size: 256 
+vocab_size: 256 # 32
 n_layer: 12
 # force_causal_conv: True
 

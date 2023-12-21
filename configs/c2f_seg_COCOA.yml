@@ -20,10 +20,9 @@ Image_W: 256
 Image_H: 256
 patch_W: 256
 patch_H: 256
-root_path: /home/ubuntu/data/KINS
 
 # =========================== Model Settings ===========================
-init_gpt_with_vqvae: False 
+init_gpt_with_vqvae: False # 由于GPTemb维度和vae不同，会投影
 plm_in_cond: False
 lm_rate: 1   # language model rate
 sequence_length: 256
@@ -35,19 +34,19 @@ resid_pdrop: 0.01
 embd_pdrop: 0.01
 vocab_size: 256
 n_layer: 12
-#force_causal_conv: True 
+#force_causal_conv: True # 重要
 
 # if use condGPT use encoder_layer and decoder_layer
-use_cond_gpt: False 
+use_cond_gpt: False # ### 重要 ###
 enc_layer: 6
 dec_layer: 12
 
 # train with img loss
 train_with_dec: False
-combined_vqgan: True 
-gumbel_softmax: True 
-temp_start: 1.0 
-temp_end: 0.1 
+combined_vqgan: True # 重要
+gumbel_softmax: True # 重要
+temp_start: 1.0 # 退火起始
+temp_end: 0.1 # 退火终点
 balanced_loss: True
 tp: 10.
 rec_weight: 1.0
@@ -65,6 +64,8 @@ weight_decay: 0.01
 batch_size: 64
 max_iters: 10000
 warmup_iters: 3000
+# max_iters: 300000
+# warmup_iters: 10000
 decay_type: 'warmup_linear'
 min_mask_rate: 0.50
 gamma_mode: "cosine"

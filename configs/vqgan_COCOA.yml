@@ -11,7 +11,7 @@ input_size: 256
 flip: True
 
 # data
-root_path: /home/ubuntu/data/COCOA
+root_path: /home/ubuntu/data/Cocoa
 
 # =========================== MODEL Settings ===========================
 

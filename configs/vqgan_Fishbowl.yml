@@ -12,7 +12,19 @@ input_size: 256
 flip: True
 center_crop: False
 
-root_path: /home/ubuntu/data/FishBowl
+train_image_root: /home/ubuntu/data/fishbowl/train_data/train_frames
+test_image_root: /home/ubuntu/data/fishbowl/test_data/test_frames
+
+train_mask_path: /home/ubuntu/data/fishbowl/train_fish.pkl
+test_mask_path: /home/ubuntu/data/fishbowl/test_fish.pkl
+
+# data
+data_flist:
+  Fishbowl: [
+      '/home/ubuntu/data/fishbowl/train_list.txt',
+      '/home/ubuntu/data/fishbowl/test_list.txt'
+  ]
+
 # =========================== MODEL Settings ===========================
 
 model:
