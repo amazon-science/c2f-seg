@@ -4,6 +4,7 @@
 
 [Jianxiong Gao](https://jianxgao.github.io/), [Xuelin Qian†](https://naiq.github.io/), [Yikai Wang](https://yikai-wang.github.io/), [Tianjun Xiao†](https://tianjunxiao.com/), [Tong He](https://hetong007.github.io/), [Zheng Zhang](https://www.amazon.science/author/zheng-zhang), [Yanwei Fu](https://yanweifu.github.io/)
 
+
 [![ArXiv](https://img.shields.io/badge/ArXiv-2308.16825-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2308.16825)
 [![HomePage](https://img.shields.io/badge/HomePage-Visit-blue.svg?logo=homeadvisor&logoColor=f5f5f5)](https://jianxgao.github.io/C2F-Seg/)
 [![Dataset](https://img.shields.io/badge/Dataset-MOViD_Amodal-F07B3F.svg)](https://data.dgl.ai/dataset/C2F-Seg/MOViD_A.tar)
@@ -11,6 +12,9 @@
 [![Visitor](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Famazon-science%2Fc2f-seg&count_bg=%2352D3D8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Visitors&edge_flat=false)](https://hits.seeyoufarm.com)
 
 </center>
+
+This is the Official Implementation for ICCV'23 paper Coarse-to-Fine Amodal Segmentation with Shape Prior (C2F-Seg).
+
 
 # Introduction
 
