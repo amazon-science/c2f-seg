@@ -1,6 +1,6 @@
 <center>
 
-# [Coarse-to-Fine Amodal Segmentation with Shape Prior (C2F-Seg)](https://openaccess.thecvf.com/content/ICCV2023/papers/Gao_Coarse-to-Fine_Amodal_Segmentation_with_Shape_Prior_ICCV_2023_paper.pdf)
+# Coarse-to-Fine Amodal Segmentation with Shape Prior (C2F-Seg)
 
 [Jianxiong Gao](https://jianxgao.github.io/), [Xuelin Qian†](https://naiq.github.io/), [Yikai Wang](https://yikai-wang.github.io/), [Tianjun Xiao†](https://tianjunxiao.com/), [Tong He](https://hetong007.github.io/), [Zheng Zhang](https://www.amazon.science/author/zheng-zhang), [Yanwei Fu](https://yanweifu.github.io/)
 
@@ -13,7 +13,7 @@
 
 </center>
 
-This is the Official Implementation for ICCV'23 paper Coarse-to-Fine Amodal Segmentation with Shape Prior (C2F-Seg).
+This is the Official Implementation for ICCV'23 paper [Coarse-to-Fine Amodal Segmentation with Shape Prior](https://openaccess.thecvf.com/content/ICCV2023/papers/Gao_Coarse-to-Fine_Amodal_Segmentation_with_Shape_Prior_ICCV_2023_paper.pdf).
 
 
 # Introduction
