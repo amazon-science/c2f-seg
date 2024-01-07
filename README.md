@@ -34,7 +34,7 @@ If conda is too slow, you can use:
 ```bash
 conda create --name C2F-Seg python=3.10
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
-python setup.py install
+pip install -e .[all]
 ```
 
 # MOViD-Amodal
