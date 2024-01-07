@@ -26,8 +26,17 @@ C2F-Seg is a framework designed for amodal segementation. It first generates a c
 ```bash
 git clone https://github.com/amazon-science/c2f-seg.git
 cd c2f-seg
-conda create --name C2F_Seg --file requirements.txt
+conda env create -f environment.yml
 ```
+
+If conda is too slow, you can use:
+
+```bash
+conda create --name C2F-Seg python=3.10
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+python setup.py install
+```
+
 # MOViD-Amodal
 
 <img src="./imgs/example.gif" width="100%">
