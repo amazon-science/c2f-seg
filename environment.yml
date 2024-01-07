@@ -1,4 +1,4 @@
-name: C2F-Seg2
+name: C2F-Seg
 channels:
   - pytorch
   - nvidia
