@@ -1,0 +1,22 @@
+name: C2F-Seg2
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch
+  - pytorch-cuda=11.8
+  - torchvision
+  - pip
+  - pip:
+    - opencv-python
+    - tqdm
+    - matplotlib
+    - numpy=1.22.4
+    - pandas
+    - packaging
+    - tensorboard
+    - cvbase
+    - scikit-image
+    - pycocotools
